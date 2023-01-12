@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ReturnFragment">
+
+        <TextView
+            android:id="@+id/background_rec"
+            android:layout_width="352dp"
+            android:layout_height="515dp"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="6dp"
+            android:background="@drawable/rectangle"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.55"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <EditText
+            android:id="@+id/returnQuantityEdit"
+            android:layout_width="163dp"
+            android:layout_height="42dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:hint="Return Quantity"
+            android:inputType="number"
+            app:layout_constraintStart_toEndOf="@+id/returnPartNumberText"
+            app:layout_constraintTop_toBottomOf="@+id/returnOtherReason"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <EditText
+            android:id="@+id/returnOtherReason"
+            android:layout_width="163dp"
+            android:layout_height="42dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:editable="false"
+            android:ems="10"
+            android:hint="Other Reason"
+            android:inputType="text"
+            android:visibility="visible"
+            app:layout_constraintStart_toEndOf="@+id/returnPartNumberText"
+            app:layout_constraintTop_toBottomOf="@+id/returnReasonSpinner"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:visibility="visible"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.85"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/background_rec"
+            app:layout_constraintVertical_bias="0.0">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="0dp">
+
+                <TextView
+                    android:id="@+id/returnSerialNumberEdit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:padding="5dp"
+                    android:text="-"
+                    android:textColor="@color/black"
+                    android:textSize="12dp"
+                    android:visibility="visible" />
+
+                <Button
+                    android:id="@+id/returnScanSerialButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button"
+                    android:gravity="center"
+                    android:padding="1dp"
+                    android:text="Scan"
+                    android:textColor="@color/white"
+                    app:backgroundTint="@null"
+                    tools:layout_editor_absoluteX="285dp"
+                    tools:layout_editor_absoluteY="620dp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <EditText
+            android:id="@+id/returnPICEdit"
+            android:layout_width="178dp"
+            android:layout_height="52dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:fontFamily="@font/montserrat"
+            android:hint="Name"
+            android:inputType="textPersonName"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/returnPartNumberText"
+            app:layout_constraintTop_toBottomOf="@+id/returnQuantityEdit"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <TextView
+            android:id="@+id/returnSerialNumberText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="34dp"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/montserrat"
+            android:text="Serial Number :       "
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/background_rec" />
+
+        <TextView
+            android:id="@+id/returnReasonText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="34dp"
+            android:layout_marginTop="50dp"
+            android:fontFamily="@font/montserrat"
+            android:text="Reason :        "
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/returnPartNumberText" />
+
+        <TextView
+            android:id="@+id/returnPartNumberText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="34dp"
+            android:layout_marginTop="50dp"
+            android:fontFamily="@font/montserrat"
+            android:text="Part Number :       "
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/returnSerialNumberText" />
+
+        <TextView
+            android:id="@+id/returnPICText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="34dp"
+            android:layout_marginTop="50dp"
+            android:fontFamily="@font/montserrat"
+            android:text="PIC :       "
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/returnQuantityText" />
+
+        <TextView
+            android:id="@+id/returnPartNumberEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="34dp"
+            android:text="-"
+            app:layout_constraintStart_toEndOf="@+id/returnPartNumberText"
+            app:layout_constraintTop_toBottomOf="@+id/cardView1" />
+
+        <Button
+            android:id="@+id/returnConfirmButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="130dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/button"
+            android:text="Confirm"
+            app:backgroundTint="@null"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/returnPICEdit" />
+
+        <Spinner
+            android:id="@+id/returnReasonSpinner"
+            android:layout_width="137dp"
+            android:layout_height="42dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="45dp"
+            android:entries="@array/returnReason_arrays"
+            app:layout_constraintStart_toEndOf="@+id/returnPartNumberText"
+            app:layout_constraintTop_toBottomOf="@+id/returnPartNumberEdit"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <TextView
+            android:id="@+id/returnQuantityText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="34dp"
+            android:layout_marginTop="90dp"
+            android:fontFamily="@font/montserrat"
+            android:text="Return Quantity :       "
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/returnReasonText" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

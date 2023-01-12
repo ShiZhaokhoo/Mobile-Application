@@ -1,0 +1,658 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ReceiveReceiptFragment"
+        tools:layout_editor_absoluteX="4dp"
+        tools:layout_editor_absoluteY="85dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/receiveReceipt"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/background_rec1"
+                android:layout_width="347dp"
+                android:layout_height="433dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="6dp"
+                android:background="@drawable/rectangle"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.492"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.050000012" />
+
+            <TextView
+                android:id="@+id/receivedSerialNumberText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="40dp"
+                android:fontFamily="@font/montserrat"
+                android:text="Serial Number :       "
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/background_rec1" />
+
+            <TextView
+                android:id="@+id/receiveSerialNumberEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="40dp"
+                android:fontFamily="@font/montserrat"
+                android:text="-"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@+id/receivedSerialNumberText"
+                app:layout_constraintTop_toTopOf="@+id/background_rec1" />
+
+            <TextView
+                android:id="@+id/receivedPartNumberText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="50dp"
+                android:fontFamily="@font/montserrat"
+                android:text="Part Number :       "
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/receivedSerialNumberText" />
+
+            <TextView
+                android:id="@+id/receivedQuantityText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="50dp"
+                android:fontFamily="@font/montserrat"
+                android:text="Quantity :       "
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/receivedPartNumberText" />
+
+            <Button
+                android:id="@+id/backButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="145dp"
+                android:layout_marginTop="64dp"
+                android:background="@drawable/button"
+                android:text="Back"
+                app:backgroundTint="@null"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/receivePICEdit" />
+
+            <TextView
+                android:id="@+id/receivedPartNumberEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="50dp"
+                android:fontFamily="@font/montserrat"
+                android:text="-"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@+id/receivedSerialNumberText"
+                app:layout_constraintTop_toBottomOf="@+id/receiveSerialNumberEdit" />
+
+            <TextView
+                android:id="@+id/receivedPICText"
+                android:layout_width="72dp"
+                android:layout_height="23dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="50dp"
+                android:fontFamily="@font/montserrat"
+                android:text="PIC :       "
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/receivedQuantityText" />
+
+            <TextView
+                android:id="@+id/receivedQuantityEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="50dp"
+                android:fontFamily="@font/montserrat"
+                android:text="-"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@+id/receivedSerialNumberText"
+                app:layout_constraintTop_toBottomOf="@+id/receivedPartNumberEdit" />
+
+            <TextView
+                android:id="@+id/receivePICEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="50dp"
+                android:fontFamily="@font/montserrat"
+                android:text="-"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@+id/receivedSerialNumberText"
+                app:layout_constraintTop_toBottomOf="@+id/receivedQuantityEdit" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/restockReceipt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            tools:layout_editor_absoluteY="0dp">
+
+            <TextView
+                android:id="@+id/background_rec2"
+                android:layout_width="347dp"
+                android:layout_height="483dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="6dp"
+                android:background="@drawable/rectangle"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.538"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/restockRackText"
+                android:layout_width="124dp"
+                android:layout_height="28dp"
+                android:layout_marginStart="34dp"
+                android:layout_marginTop="50dp"
+                android:fontFamily="@font/montserrat"
+                android:text="Rack Number :       "
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/restockQuantityText" />
+
+            <TextView
+                android:id="@+id/restockRackEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="50dp"
+                android:fontFamily="@font/montserrat"
+                android:text="-"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@+id/restockSerialNumberText"
+                app:layout_constraintTop_toBottomOf="@+id/restockQuantityEdit" />
+
+            <TextView
+                android:id="@+id/restockSerialNumberText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="34dp"
+                android:layout_marginTop="40dp"
+                android:fontFamily="@font/montserrat"
+                android:text="Serial Number :       "
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/background_rec2" />
+
+            <TextView
+                android:id="@+id/restockSerialNumberEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="40dp"
+                android:fontFamily="@font/montserrat"
+                android:text="-"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@+id/restockSerialNumberText"
+                app:layout_constraintTop_toTopOf="@+id/background_rec2" />
+
+            <TextView
+                android:id="@+id/restockPartNumberText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="34dp"
+                android:layout_marginTop="50dp"
+                android:fontFamily="@font/montserrat"
+                android:text="Part Number :       "
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/restockSerialNumberText" />
+
+            <TextView
+                android:id="@+id/restockQuantityText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="34dp"
+                android:layout_marginTop="50dp"
+                android:fontFamily="@font/montserrat"
+                android:text="Quantity :       "
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/restockPartNumberText" />
+
+            <Button
+                android:id="@+id/restockBackButton"
+                app:backgroundTint="@null"
+                android:background="@drawable/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="156dp"
+                android:layout_marginTop="48dp"
+                android:text="Back"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/restockPICEdit" />
+
+            <TextView
+                android:id="@+id/restockPartNumberEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="50dp"
+                android:fontFamily="@font/montserrat"
+                android:text="-"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@+id/restockSerialNumberText"
+                app:layout_constraintTop_toBottomOf="@+id/restockSerialNumberEdit" />
+
+            <TextView
+                android:id="@+id/restockPICText"
+                android:layout_width="72dp"
+                android:layout_height="23dp"
+                android:layout_marginStart="34dp"
+                android:layout_marginTop="44dp"
+                android:fontFamily="@font/montserrat"
+                android:text="PIC :       "
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/restockRackText" />
+
+            <TextView
+                android:id="@+id/restockPICEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="50dp"
+                android:fontFamily="@font/montserrat"
+                android:text="-"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@+id/restockSerialNumberText"
+                app:layout_constraintTop_toBottomOf="@+id/restockRackEdit" />
+
+            <TextView
+                android:id="@+id/restockQuantityEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="50dp"
+                android:fontFamily="@font/montserrat"
+                android:text="-"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@+id/restockSerialNumberText"
+                app:layout_constraintTop_toBottomOf="@+id/restockPartNumberEdit" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/issuedReceipt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/background_rec3"
+                android:layout_width="347dp"
+                android:layout_height="526dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="6dp"
+                android:background="@drawable/rectangle"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.04000002" />
+
+            <TextView
+                android:id="@+id/issuedLeftQuantityText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="34dp"
+                android:layout_marginTop="50dp"
+                android:fontFamily="@font/montserrat"
+                android:text="Left Quantity :       "
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/receiptIssuedQuantityText" />
+
+            <TextView
+                android:id="@+id/issuedLeftQuantityEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="52dp"
+                android:fontFamily="@font/montserrat"
+                android:text="-"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@+id/issuedSerialNumberText"
+                app:layout_constraintTop_toBottomOf="@+id/receiptIssuedQuantityEdit" />
+
+            <TextView
+                android:id="@+id/receiptIssuedQuantityText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="34dp"
+                android:layout_marginTop="50dp"
+                android:fontFamily="@font/montserrat"
+                android:text="Issued Quantity :       "
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/issuedPartNumberText" />
+
+            <TextView
+                android:id="@+id/receiptIssuedQuantityEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="48dp"
+                android:fontFamily="@font/montserrat"
+                android:text="-"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@+id/issuedSerialNumberText"
+                app:layout_constraintTop_toBottomOf="@+id/issuedPartNumberEdit" />
+
+            <TextView
+                android:id="@+id/issuedSerialNumberText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="34dp"
+                android:layout_marginTop="40dp"
+                android:fontFamily="@font/montserrat"
+                android:text="Serial Number :       "
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/background_rec3" />
+
+            <TextView
+                android:id="@+id/issuedSerialNumberEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="40dp"
+                android:fontFamily="@font/montserrat"
+                android:text="-"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@+id/issuedSerialNumberText"
+                app:layout_constraintTop_toTopOf="@+id/background_rec3" />
+
+            <TextView
+                android:id="@+id/issuedPartNumberText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="34dp"
+                android:layout_marginTop="50dp"
+                android:fontFamily="@font/montserrat"
+                android:text="Part Number :       "
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/issuedSerialNumberText" />
+
+            <TextView
+                android:id="@+id/issuedPartNumberEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="50dp"
+                android:fontFamily="@font/montserrat"
+                android:text="-"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@+id/issuedSerialNumberText"
+                app:layout_constraintTop_toBottomOf="@+id/issuedSerialNumberEdit" />
+
+            <TextView
+                android:id="@+id/issuedPICEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="48dp"
+                android:fontFamily="@font/montserrat"
+                android:text="-"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@+id/issuedSerialNumberText"
+                app:layout_constraintTop_toBottomOf="@+id/issuedRackEdit" />
+
+            <TextView
+                android:id="@+id/issuedRackText"
+                android:layout_width="99dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="34dp"
+                android:layout_marginTop="50dp"
+                android:fontFamily="@font/montserrat"
+                android:text="Rack ID :       "
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/issuedLeftQuantityText" />
+
+            <TextView
+                android:id="@+id/issuedRackEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="52dp"
+                android:fontFamily="@font/montserrat"
+                android:text="-"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@+id/issuedSerialNumberText"
+                app:layout_constraintTop_toBottomOf="@+id/issuedLeftQuantityEdit" />
+
+            <TextView
+                android:id="@+id/issuedPICText"
+                android:layout_width="72dp"
+                android:layout_height="23dp"
+                android:layout_marginStart="34dp"
+                android:layout_marginTop="50dp"
+                android:fontFamily="@font/montserrat"
+                android:text="PIC :       "
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/issuedRackText" />
+
+            <Button
+                android:id="@+id/issuedBackButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="160dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/button"
+                android:text="Back"
+                app:backgroundTint="@null"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/issuedPICEdit" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/returnReceipt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/background_rec"
+                android:layout_width="347dp"
+                android:layout_height="527dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="6dp"
+                android:background="@drawable/rectangle"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.576"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/receiptReturnReasonText"
+                android:layout_width="135dp"
+                android:layout_height="28dp"
+                android:layout_marginStart="34dp"
+                android:layout_marginTop="48dp"
+                android:fontFamily="@font/montserrat"
+                android:text="Return Reason : "
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/returnLeftQuantityText" />
+
+            <TextView
+                android:id="@+id/receiptReturnReasonEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="50dp"
+                android:fontFamily="@font/montserrat"
+                android:text="-"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@+id/returnSerialNumberText"
+                app:layout_constraintTop_toBottomOf="@+id/returnLeftQuantityEdit" />
+
+            <TextView
+                android:id="@+id/returnLeftQuantityText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="34dp"
+                android:layout_marginTop="50dp"
+                android:fontFamily="@font/montserrat"
+                android:text="Left Quantity : "
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/receiptReturnQuantityText" />
+
+            <TextView
+                android:id="@+id/returnLeftQuantityEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="50dp"
+                android:fontFamily="@font/montserrat"
+                android:text="-"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@+id/returnSerialNumberText"
+                app:layout_constraintTop_toBottomOf="@+id/receiptReturnQuantityEdit" />
+
+            <TextView
+                android:id="@+id/receiptReturnQuantityText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="34dp"
+                android:layout_marginTop="50dp"
+                android:fontFamily="@font/montserrat"
+                android:text="Return Quantity : "
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/returnPartNumberText" />
+
+            <TextView
+                android:id="@+id/receiptReturnQuantityEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="48dp"
+                android:fontFamily="@font/montserrat"
+                android:text="-"
+                app:layout_constraintStart_toEndOf="@+id/returnSerialNumberText"
+                app:layout_constraintTop_toBottomOf="@+id/returnPartNumberEdit" />
+
+            <TextView
+                android:id="@+id/returnSerialNumberText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="34dp"
+                android:layout_marginTop="40dp"
+                android:fontFamily="@font/montserrat"
+                android:text="Serial Number : "
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/background_rec" />
+
+            <TextView
+                android:id="@+id/returnSerialNumberEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="40dp"
+                android:fontFamily="@font/montserrat"
+                android:text="-"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@+id/returnSerialNumberText"
+                app:layout_constraintTop_toTopOf="@+id/background_rec" />
+
+            <TextView
+                android:id="@+id/returnPartNumberText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="34dp"
+                android:layout_marginTop="50dp"
+                android:fontFamily="@font/montserrat"
+                android:text="Part Number : "
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/returnSerialNumberText" />
+
+            <TextView
+                android:id="@+id/returnPartNumberEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="50dp"
+                android:fontFamily="@font/montserrat"
+                android:text="-"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@+id/returnSerialNumberText"
+                app:layout_constraintTop_toBottomOf="@+id/returnSerialNumberEdit" />
+
+            <TextView
+                android:id="@+id/returnPICEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="50dp"
+                android:fontFamily="@font/montserrat"
+                android:text="-"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@+id/returnSerialNumberText"
+                app:layout_constraintTop_toBottomOf="@+id/receiptReturnReasonEdit" />
+
+            <TextView
+                android:id="@+id/returnPICText"
+                android:layout_width="72dp"
+                android:layout_height="23dp"
+                android:layout_marginStart="34dp"
+                android:layout_marginTop="50dp"
+                android:fontFamily="@font/montserrat"
+                android:text="PIC : "
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/receiptReturnReasonText" />
+
+            <Button
+                android:id="@+id/returnBackButton"
+                app:backgroundTint="@null"
+                android:background="@drawable/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="160dp"
+                android:layout_marginTop="36dp"
+                android:text="Back"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/returnPICEdit" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

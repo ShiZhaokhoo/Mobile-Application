@@ -1,0 +1,63 @@
+<resources>
+    <string name="app_name">Assignm</string>
+
+    <!--    Text Title-->
+    <string name="nameText">Name : </string>
+    <string name="employeeIdText">Employee ID : </string>
+    <string name="telNoText">Tel No. : </string>
+    <string name="positionText">Position : </string>
+    <string name="passwordText">Password : </string>
+    <string name="confirmPasswordText">Confirm Password : </string>
+    <string name="picText">PIC : </string>
+    <string name="quantityText">Quantity : </string>
+
+    <!--    Edit Title-->
+    <string name="nameEdit">Name</string>
+    <string name="employeeIdEdit">Employee ID</string>
+    <string name="telNoEdit">Tel No.</string>
+    <string name="positionEdit">Position</string>
+    <string name="passwordEdit">Password</string>
+    <string name="confirmPasswordEdit">Confirm Password</string>
+    <string name="picEdit">PIC</string>
+    <string name="quantityEdit">Quantity</string>
+
+    <!--    Login Fragment-->
+    <string name="signIn"> <u>Sign In</u></string>
+
+    <!--    Register Fragment-->
+
+
+    <!--    Main Fragment-->
+
+
+    <!--    Received Fragment-->
+
+
+    <!--    Restock Fragment-->
+
+
+    <!--    Issued Fragment-->
+
+
+    <!--    Return Fragment-->
+
+    <!--    DropDownList-->
+    <string-array name="returnReason_arrays">
+        <item>Defective</item>
+        <item>Damaged</item>
+        <item>Faulty</item>
+        <item>Others</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--    Login Fragment-->
+
+
+    <!--    Login Fragment-->
+
+
+    <!--    Login Fragment-->
+
+
+</resources>

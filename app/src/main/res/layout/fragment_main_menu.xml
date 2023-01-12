@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainMenuFragment">
+
+
+        <TextView
+            android:id="@+id/receivedTransactionBoard"
+            android:layout_width="319dp"
+            android:layout_height="109dp"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="6dp"
+            android:background="@drawable/main_rectangle"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/receivedTransactionText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/montserrat"
+            android:text="Received Transaction :       "
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/receivedTransactionBoard"
+            app:layout_constraintStart_toStartOf="@+id/receivedTransactionBoard"
+            app:layout_constraintTop_toTopOf="@+id/receivedTransactionBoard" />
+
+        <TextView
+            android:id="@+id/receivedTransactionNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/montserrat"
+            android:text="-"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="@+id/receivedTransactionBoard"
+            app:layout_constraintStart_toStartOf="@+id/receivedTransactionBoard"
+            app:layout_constraintTop_toBottomOf="@+id/receivedTransactionText" />
+
+        <TextView
+            android:id="@+id/issuedTransactionBoard"
+            android:layout_width="319dp"
+            android:layout_height="109dp"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="6dp"
+            android:background="@drawable/red_rectangle"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/receivedTransactionBoard"
+            app:layout_constraintVertical_bias="0.00999999" />
+
+        <TextView
+            android:id="@+id/receivedTransactionText2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/montserrat"
+            android:text="Issued Transaction :        "
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/issuedTransactionBoard"
+            app:layout_constraintHorizontal_bias="0.369"
+            app:layout_constraintStart_toStartOf="@+id/issuedTransactionBoard"
+            app:layout_constraintTop_toTopOf="@+id/issuedTransactionBoard" />
+
+        <TextView
+            android:id="@+id/issuedTransactionNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/montserrat"
+            android:text="-"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="@+id/issuedTransactionBoard"
+            app:layout_constraintStart_toStartOf="@+id/issuedTransactionBoard"
+            app:layout_constraintTop_toBottomOf="@+id/receivedTransactionText2" />
+
+        <!--<LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">-->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="250dp"
+            android:paddingTop="2dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/issuedTransactionBoard">
+
+            <GridLayout
+                android:id="@+id/mainGrid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="8"
+                android:alignmentMode="alignMargins"
+                android:columnCount="2"
+                android:columnOrderPreserved="false"
+                android:minHeight="480dp"
+                android:padding="10dp"
+                android:rowCount="2"
+                tools:layout_editor_absoluteX="0dp">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/receivedButton"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginBottom="16dp"
+                    app:cardBackgroundColor="#fdfd96"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="8dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:layout_margin="16dp"
+                        android:background="#fdfd96"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_gravity="center_horizontal"
+                            android:src="@drawable/receive_icon" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:background="#fdfd96"
+                            android:text="Material Received"
+                            android:textAlignment="center"
+                            android:textSize="17dp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <!-- Column 2 -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/restockButton"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginBottom="16dp"
+                    app:cardBackgroundColor="#fdfd96"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="8dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:layout_margin="16dp"
+                        android:padding="2dp"
+                        android:background="#fdfd96"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_gravity="center_horizontal"
+                            android:src="@drawable/restock_icon" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:text="Material Restock"
+                            android:background="#fdfd96"
+                            android:textAlignment="center"
+                            android:textSize="17dp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+                <!-- Row 2 -->
+
+                <!-- Column 1 -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/issuedButton"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginBottom="16dp"
+                    app:cardBackgroundColor="#fdfd96"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="8dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:layout_margin="16dp"
+                        android:background="#fdfd96"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_gravity="center_horizontal"
+                            android:src="@drawable/issued_icon" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:text="Material Issued"
+                            android:textAlignment="center"
+                            android:background="#fdfd96"
+                            android:textSize="17dp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <!-- Column 2 -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/returnButton"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginBottom="16dp"
+                    app:cardBackgroundColor="#fdfd96"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="8dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:layout_margin="16dp"
+                        android:background="#fdfd96"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_gravity="center_horizontal"
+                            android:src="@drawable/return_icon" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:text="Material Return"
+                            android:textAlignment="center"
+                            android:textSize="17dp"
+                            android:background="#fdfd96"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+            </GridLayout>
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

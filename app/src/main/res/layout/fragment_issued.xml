@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".IssuedMaterial.IssuedFragment">
+
+        <TextView
+            android:id="@+id/background_rec"
+            android:layout_width="352dp"
+            android:layout_height="471dp"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="6dp"
+            android:background="@drawable/rectangle"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.6"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.011" />
+
+        <EditText
+            android:id="@+id/issuedPICEdit"
+            android:layout_width="165dp"
+            android:layout_height="39dp"
+            android:layout_marginStart="76dp"
+            android:layout_marginTop="24dp"
+            android:ems="10"
+            android:fontFamily="sans-serif"
+            android:hint="Name"
+            android:inputType="textPersonName"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/issuedPICText"
+            app:layout_constraintTop_toBottomOf="@+id/issuedRackIdEdit"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <TextView
+            android:id="@+id/issuePartNumberEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="19dp"
+            android:fontFamily="@font/montserrat"
+            android:text="-"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/issuedPartTitle"
+            app:layout_constraintTop_toBottomOf="@+id/cardView1" />
+
+        <TextView
+            android:id="@+id/issuedRackIdEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/montserrat"
+            android:text="-"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/issuedPartTitle"
+            app:layout_constraintTop_toBottomOf="@+id/issuedQuantityEdit" />
+
+        <TextView
+            android:id="@+id/issuedPartTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="34dp"
+            android:layout_marginTop="36dp"
+            android:fontFamily="@font/montserrat"
+            android:text="Part Number :       "
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/issuedSerialNumberText" />
+
+        <TextView
+            android:id="@+id/issuedPICText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="34dp"
+            android:layout_marginTop="28dp"
+            android:fontFamily="@font/montserrat"
+            android:text="PIC :       "
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/issuedRackIdText" />
+
+        <TextView
+            android:id="@+id/issuedRackIdText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="34dp"
+            android:layout_marginTop="28dp"
+            android:fontFamily="@font/montserrat"
+            android:text="Rack ID :       "
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/issuedQuantityText" />
+
+        <TextView
+            android:id="@+id/issuedSerialNumberText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="34dp"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/montserrat"
+            android:text="Serial Number :       "
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/background_rec" />
+
+        <TextView
+            android:id="@+id/issuedQuantityText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="34dp"
+            android:layout_marginTop="36dp"
+            android:fontFamily="@font/montserrat"
+            android:text="Quantity :       "
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/issuedPartTitle" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:visibility="visible"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.87"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/background_rec"
+            app:layout_constraintVertical_bias="0.0">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="0dp">
+
+                <TextView
+                    android:id="@+id/issuedSerialNumberEdit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:padding="5dp"
+                    android:text="-"
+                    android:textColor="@color/black"
+                    android:textSize="12dp"
+                    android:visibility="visible" />
+
+                <Button
+                    android:id="@+id/issuedScanSerialButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button"
+                    android:gravity="center"
+                    android:padding="1dp"
+                    android:text="Scan"
+                    android:textColor="@color/white"
+                    app:backgroundTint="@null"
+                    tools:layout_editor_absoluteX="285dp"
+                    tools:layout_editor_absoluteY="620dp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/issuedConfirmButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="130dp"
+            android:layout_marginTop="71dp"
+            android:background="@drawable/button"
+            android:text="Confirm"
+            app:backgroundTint="@null"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/issuedPICEdit" />
+
+        <EditText
+            android:id="@+id/issuedQuantityEdit"
+            android:layout_width="176dp"
+            android:layout_height="38dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="30dp"
+            android:ems="10"
+            android:fontFamily="sans-serif"
+            android:hint="Quantity"
+            android:inputType="number|text"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/issuedQuantityText"
+            app:layout_constraintTop_toBottomOf="@+id/issuePartNumberEdit"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <TextView
+            android:id="@+id/restQuantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="157dp"
+            android:text="TextView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/background_rec" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

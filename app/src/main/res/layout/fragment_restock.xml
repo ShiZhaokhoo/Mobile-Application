@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".RestockMaterial.RestockFragment">
+
+        <TextView
+            android:id="@+id/background_rec"
+            android:layout_width="347dp"
+            android:layout_height="478dp"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="6dp"
+            android:background="@drawable/rectangle"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.47"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/restockConfirmButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="130dp"
+            android:layout_marginTop="35dp"
+            android:background="@drawable/button"
+            android:text="Confirm"
+            app:backgroundTint="@null"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/restockPICEdit" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="85dp"
+            android:layout_marginTop="40dp"
+            android:visibility="visible"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.87"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/serialNumberText"
+            app:layout_constraintTop_toBottomOf="@+id/restockQuantityEdit"
+            app:layout_constraintVertical_bias="0.0">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="0dp">
+
+                <TextView
+                    android:id="@+id/restockRackIdEdit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:padding="5dp"
+                    android:textColor="@color/black"
+                    android:textSize="12dp"
+                    android:visibility="visible" />
+
+                <Button
+                    android:id="@+id/restockRackIdButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button"
+                    android:gravity="center"
+                    android:padding="1dp"
+                    android:text="Scan"
+                    android:textColor="@color/white"
+                    app:backgroundTint="@null"
+                    tools:layout_editor_absoluteX="285dp"
+                    tools:layout_editor_absoluteY="620dp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/restockQuantityEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="50dp"
+            android:fontFamily="@font/montserrat"
+            android:text="-"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/restockPartNumberText"
+            app:layout_constraintTop_toBottomOf="@+id/restockPartNumberEdit" />
+
+        <TextView
+            android:id="@+id/restockPartNumberEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="37dp"
+            android:fontFamily="@font/montserrat"
+            android:text="-"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/restockPartNumberText"
+            app:layout_constraintTop_toBottomOf="@+id/cardView1" />
+
+        <TextView
+            android:id="@+id/restockRackIdText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="50dp"
+            android:fontFamily="@font/montserrat"
+            android:text="Rack ID :       "
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/restockQuantityText" />
+
+        <TextView
+            android:id="@+id/restockQuantityText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="50dp"
+            android:fontFamily="@font/montserrat"
+            android:text="Quantity :       "
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/restockPartNumberText" />
+
+        <TextView
+            android:id="@+id/restockPICText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="50dp"
+            android:fontFamily="@font/montserrat"
+            android:text="PIC :       "
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/restockRackIdText" />
+
+        <TextView
+            android:id="@+id/restockPartNumberText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="50dp"
+            android:fontFamily="@font/montserrat"
+            android:text="Part Number :       "
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/serialNumberText" />
+
+        <TextView
+            android:id="@+id/serialNumberText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/montserrat"
+            android:text="Serial Number :       "
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/background_rec" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginBottom="565dp"
+            android:visibility="visible"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.88"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/serialNumberText"
+            app:layout_constraintTop_toTopOf="@+id/background_rec"
+            app:layout_constraintVertical_bias="0.0">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="0dp">
+
+                <TextView
+                    android:id="@+id/serialNumberEdit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:padding="5dp"
+                    android:text="-"
+                    android:textColor="@color/black"
+                    android:textSize="12dp"
+                    android:visibility="visible" />
+
+                <Button
+                    android:id="@+id/scanSerialButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button"
+                    android:gravity="center"
+                    android:padding="1dp"
+                    android:text="Scan"
+                    android:textColor="@color/white"
+                    app:backgroundTint="@null"
+                    tools:layout_editor_absoluteX="285dp"
+                    tools:layout_editor_absoluteY="620dp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <EditText
+            android:id="@+id/restockPICEdit"
+            android:layout_width="174dp"
+            android:layout_height="46dp"
+            android:layout_marginStart="-20dp"
+            android:layout_marginTop="27dp"
+            android:ems="10"
+            android:hint="Name"
+            android:inputType="textPersonName"
+            app:layout_constraintStart_toEndOf="@+id/restockPartNumberText"
+            app:layout_constraintTop_toBottomOf="@+id/cardView2"
+            tools:ignore="TouchTargetSizeCheck" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/menu_nav"
+    app:startDestination="@id/mainMenuFragment">
+
+    <fragment
+        android:id="@+id/mainMenuFragment"
+        android:name="com.example.assignm.MainMenuFragment"
+        android:label="Main Menu"
+        tools:layout="@layout/fragment_main_menu">
+        <action
+            android:id="@+id/action_mainMenuFragment_to_receivedFragment"
+            app:destination="@id/receivedFragment" />
+        <action
+            android:id="@+id/action_mainMenuFragment_to_restockFragment"
+            app:destination="@id/restockFragment" />
+        <action
+            android:id="@+id/action_mainMenuFragment_to_issuedFragment"
+            app:destination="@id/issuedFragment" />
+        <action
+            android:id="@+id/action_mainMenuFragment_to_returnFragment"
+            app:destination="@id/returnFragment" />
+        <action
+            android:id="@+id/action_mainMenuFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_mainMenuFragment_to_materialFragment"
+            app:destination="@id/materialFragment" />
+        <action
+            android:id="@+id/action_mainMenuFragment_to_employeeDirectoryFragment"
+            app:destination="@id/employeeDirectoryFragment" />
+        <action
+            android:id="@+id/action_mainMenuFragment_to_reportFragment"
+            app:destination="@id/reportFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/receivedFragment"
+        android:name="com.example.assignm.ReceivedMaterial.ReceivedFragment"
+        android:label="Material Receive"
+        tools:layout="@layout/fragment_received">
+        <action
+            android:id="@+id/action_receivedFragment_to_scannerFragment"
+            app:destination="@id/scannerFragment" />
+        <action
+            android:id="@+id/action_receivedFragment_to_receiveReceiptFragment"
+            app:destination="@id/receiveReceiptFragment"
+            app:popUpTo="@id/receiveReceiptFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/scannerFragment"
+        android:name="com.example.assignm.ScannerFragment"
+        android:label="Scanner"
+        tools:layout="@layout/fragment_scanner">
+        <argument
+            android:name="module"
+            app:argType="integer" />
+        <argument
+            android:name="isPart"
+            app:argType="boolean" />
+    </fragment>
+    <fragment
+        android:id="@+id/receiveReceiptFragment"
+        android:name="com.example.assignm.TransactionReceiptFragment"
+        android:label="Transaction Receipt"
+        tools:layout="@layout/fragment_transaction_receipt">
+        <action
+            android:id="@+id/action_receiveReceiptFragment_to_mainMenuFragment"
+            app:destination="@id/mainMenuFragment"
+            app:popUpTo="@id/mainMenuFragment"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="partNumber"
+            app:argType="string" />
+        <argument
+            android:name="module"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/restockFragment"
+        android:name="com.example.assignm.RestockMaterial.RestockFragment"
+        android:label="Material Restock"
+        tools:layout="@layout/fragment_restock">
+        <action
+            android:id="@+id/action_restockFragment_to_scannerFragment"
+            app:destination="@id/scannerFragment" />
+        <action
+            android:id="@+id/action_restockFragment_to_receiveReceiptFragment"
+            app:destination="@id/receiveReceiptFragment"
+            app:popUpTo="@id/receivedFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/issuedFragment"
+        android:name="com.example.assignm.IssuedMaterial.IssuedFragment"
+        android:label="Material Issued"
+        tools:layout="@layout/fragment_issued">
+        <action
+            android:id="@+id/action_issuedFragment_to_scannerFragment"
+            app:destination="@id/scannerFragment" />
+        <action
+            android:id="@+id/action_issuedFragment_to_receiveReceiptFragment"
+            app:destination="@id/receiveReceiptFragment"
+            app:popUpTo="@id/receiveReceiptFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/returnFragment"
+        android:name="com.example.assignm.ReturnMaterial.ReturnFragment"
+        android:label="Material Return"
+        tools:layout="@layout/fragment_return">
+        <action
+            android:id="@+id/action_returnFragment_to_scannerFragment"
+            app:destination="@id/scannerFragment" />
+        <action
+            android:id="@+id/action_returnFragment_to_receiveReceiptFragment"
+            app:destination="@id/receiveReceiptFragment"
+            app:popUpTo="@id/receivedFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/materialFragment"
+        android:name="com.example.assignm.Materials.MaterialFragment"
+        android:label="Materials"
+        tools:layout="@layout/fragment_material">
+        <action
+            android:id="@+id/action_materialFragment_to_materialDetailFragment"
+            app:destination="@id/materialDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/materialDetailFragment"
+        android:name="com.example.assignm.Materials.MaterialDetails.MaterialDetailFragment"
+        android:label="Material Details"
+        tools:layout="@layout/fragment_material_detail">
+        <action
+            android:id="@+id/action_materialDetailFragment_to_materialFurtherDetailsFragment"
+            app:destination="@id/materialFurtherDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/materialFurtherDetailsFragment"
+        android:name="com.example.assignm.Materials.MaterialDetails.FurtherDetail.MaterialFurtherDetailsFragment"
+        android:label="Further Material Detail"
+        tools:layout="@layout/fragment_material_further_details">
+        <action
+            android:id="@+id/action_materialFurtherDetailsFragment_to_mainMenuFragment"
+            app:destination="@id/mainMenuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.assignm.Registration.RegisterFragment"
+        android:label="Registration"
+        tools:layout="@layout/fragment_register">
+        <action
+            android:id="@+id/action_registerFragment_to_mainMenuFragment"
+            app:destination="@id/mainMenuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/employeeDirectoryFragment"
+        android:name="com.example.assignm.Employees.EmployeeDirectoryFragment"
+        android:label="Employees Directory"
+        tools:layout="@layout/fragment_employee_directory">
+        <action
+            android:id="@+id/action_employeeDirectoryFragment_to_fragmentEmployeeDetail"
+            app:destination="@id/fragmentEmployeeDetail" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentEmployeeDetail"
+        android:name="com.example.assignm.Employees.EmployeeDetail.FragmentEmployeeDetail"
+        android:label="Employee Detail"
+        tools:layout="@layout/fragment_employee_detail">
+        <argument
+            android:name="empIndex"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_fragmentEmployeeDetail_to_mainMenuFragment"
+            app:destination="@id/mainMenuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/reportFragment"
+        android:name="com.example.assignm.fragments.ReportFragment"
+        android:label="Material Report"
+        tools:layout="@layout/fragment_report" />
+</navigation>

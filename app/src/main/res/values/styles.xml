@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">#673AB7</item>
+        <item name="colorPrimaryDark">#512DA8</item>
+        <item name="colorAccent">#FF4081</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="montserratTextViewStyle" parent="android:Widget.TextView">
+        <item name="android:fontFamily">@font/montserrat</item>
+    </style>
+</resources>

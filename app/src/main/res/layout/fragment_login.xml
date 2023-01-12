@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/warehoussss"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        tools:context=".MainActivity">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="330dp"
+            android:layout_height="86dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.24000001"
+            app:srcCompat="@drawable/hotayi" />
+
+        <TextView
+            android:id="@+id/titleSignIn"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/sign_in_rectangle"
+            android:paddingStart="2dp"
+            android:paddingLeft="2dp"
+            android:paddingEnd="2dp"
+            android:paddingRight="2dp"
+            android:text="@string/signIn"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="34sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+        <EditText
+            android:id="@+id/editLoginEmployeeId"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/custom_input"
+            android:drawableStart="@drawable/custom_account_icon"
+            android:drawablePadding="12dp"
+            android:ems="10"
+            android:hint="@string/employeeIdEdit"
+            android:inputType="textPersonName"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titleSignIn"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <EditText
+            android:id="@+id/editPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/custom_input"
+            android:drawableStart="@drawable/custom_lock_icon"
+            android:drawablePadding="12dp"
+            android:ems="10"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editLoginEmployeeId"
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Button
+            android:id="@+id/signInButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/button"
+            android:text="Sign In"
+            app:backgroundTint="@null"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editPassword" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

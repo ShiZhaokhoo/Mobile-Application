@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1047951202083",
+    "project_id": "tarucassi",
+    "storage_bucket": "tarucassi.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1047951202083:android:e1fdf5c6609c9dd00e5e96",
+        "android_client_info": {
+          "package_name": "com.example.assignm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1047951202083-mcpfiaht9elkmrctq273stjt89fca05l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCx5Iz2kC6xrDdV7YfRjXC17om8ZN6s4Wk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1047951202083-mcpfiaht9elkmrctq273stjt89fca05l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Registration.RegisterFragment">
+
+        <TextView
+            android:id="@+id/background_rec"
+            android:layout_width="347dp"
+            android:layout_height="547dp"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="6dp"
+            android:background="@drawable/rectangle"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.576"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="319dp"
+            android:layout_height="78dp"
+            android:layout_marginTop="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/hotayi" />
+
+        <ScrollView
+            android:id="@+id/scrollView2"
+            android:layout_width="363dp"
+            android:layout_height="547dp"
+            android:layout_marginTop="80dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageView2"
+            app:layout_constraintVertical_bias="0.0">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/mainGrid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_weight="8"
+                android:alignmentMode="alignMargins"
+                android:columnCount="2"
+                android:columnOrderPreserved="false"
+                android:minHeight="480dp"
+                android:padding="10dp"
+                android:rowCount="2"
+                tools:layout_editor_absoluteX="0dp">
+
+                <EditText
+                    android:id="@+id/registerNameEdit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="45dp"
+                    android:ems="10"
+                    android:fontFamily="@font/montserrat"
+                    android:hint="@string/nameEdit"
+                    android:inputType="textPersonName"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toEndOf="@+id/registerNameText"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <EditText
+                    android:id="@+id/registerEmployeeIdEdit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="45dp"
+                    android:layout_marginTop="8dp"
+                    android:ems="10"
+                    android:fontFamily="@font/montserrat"
+                    android:hint="Employee ID"
+                    android:inputType="textPersonName"
+                    app:layout_constraintStart_toEndOf="@+id/registerNameText"
+                    app:layout_constraintTop_toBottomOf="@+id/registerPositionEdit"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <TextView
+                    android:id="@+id/registerEmailAddressText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="30dp"
+                    android:fontFamily="@font/montserrat"
+                    android:text="Email address :       "
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/registerTelNoText" />
+
+                <TextView
+                    android:id="@+id/registerPositionText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="30dp"
+                    android:fontFamily="@font/montserrat"
+                    android:text="Position :       "
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/registerEmailAddressText" />
+
+                <TextView
+                    android:id="@+id/registerEmployeeIdText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="30dp"
+                    android:fontFamily="@font/montserrat"
+                    android:text="Employee ID :       "
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/registerPositionText" />
+
+                <EditText
+                    android:id="@+id/registerEmailAddressEdit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="45dp"
+                    android:layout_marginTop="8dp"
+                    android:ems="10"
+                    android:fontFamily="@font/montserrat"
+                    android:hint="Email Address"
+                    android:inputType="textPersonName"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toEndOf="@+id/registerNameText"
+                    app:layout_constraintTop_toBottomOf="@+id/registerTelNoEdit"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <EditText
+                    android:id="@+id/registerPositionEdit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="45dp"
+                    android:layout_marginTop="8dp"
+                    android:ems="10"
+                    android:fontFamily="@font/montserrat"
+                    android:hint="Position"
+                    android:inputType="textPersonName"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toEndOf="@+id/registerNameText"
+                    app:layout_constraintTop_toBottomOf="@+id/registerEmailAddressEdit"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <EditText
+                    android:id="@+id/registerConfirmPasswordEdit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="45dp"
+                    android:layout_marginTop="8dp"
+                    android:ems="10"
+                    android:fontFamily="@font/montserrat"
+                    android:hint="Confirm Password"
+                    android:inputType="textPassword"
+                    app:layout_constraintStart_toEndOf="@+id/registerNameText"
+                    app:layout_constraintTop_toBottomOf="@+id/registerPasswordEdit"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <TextView
+                    android:id="@+id/registerConfirmPasswordText"
+                    android:layout_width="116dp"
+                    android:layout_height="51dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="24dp"
+                    android:fontFamily="@font/montserrat"
+                    android:text="Confirm Password : "
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/registerPasswordText" />
+
+                <EditText
+                    android:id="@+id/registerPasswordEdit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="45dp"
+                    android:layout_marginTop="8dp"
+                    android:ems="10"
+                    android:fontFamily="@font/montserrat"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    app:layout_constraintStart_toEndOf="@+id/registerNameText"
+                    app:layout_constraintTop_toBottomOf="@+id/registerEmployeeIdEdit"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <TextView
+                    android:id="@+id/registerTelNoText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="32dp"
+                    android:fontFamily="@font/montserrat"
+                    android:text="Tel. No. :       "
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/registerNameText" />
+
+                <TextView
+                    android:id="@+id/registerPasswordText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="32dp"
+                    android:fontFamily="@font/montserrat"
+                    android:text="Password :       "
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/registerEmployeeIdText" />
+
+                <TextView
+                    android:id="@+id/registerNameText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/montserrat"
+                    android:text="Name :       "
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/registerTelNoEdit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="45dp"
+                    android:layout_marginTop="8dp"
+                    android:ems="10"
+                    android:fontFamily="@font/montserrat"
+                    android:hint="Tel. No."
+                    android:inputType="textPersonName"
+                    app:layout_constraintStart_toEndOf="@+id/registerNameText"
+                    app:layout_constraintTop_toBottomOf="@+id/registerNameEdit"
+                    tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck" />
+
+                <Button
+                    android:id="@+id/registerCancelButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="52dp"
+                    android:layout_marginTop="36dp"
+                    android:background="@drawable/button"
+                    android:text="Cancel"
+                    app:backgroundTint="@null"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/registerConfirmPasswordText" />
+
+                <Button
+                    android:id="@+id/registerConfirmButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="52dp"
+                    android:layout_marginTop="36dp"
+                    android:background="@drawable/button"
+                    android:text="Confirm"
+                    app:backgroundTint="@null"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.021"
+                    app:layout_constraintStart_toEndOf="@+id/registerCancelButton"
+                    app:layout_constraintTop_toBottomOf="@+id/registerConfirmPasswordText" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
